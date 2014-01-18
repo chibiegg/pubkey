@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 
 class Server(models.Model):
 
+    class Meta:
+        verbose_name = u"サーバー"
+        verbose_name_plural = u"サーバー"
+
     user = models.ForeignKey(User)
     description = models.CharField(u"名称", max_length=255)
     hostname = models.CharField(u"ホスト名", max_length=255)
@@ -16,6 +20,10 @@ class Server(models.Model):
         return self.description
 
 class PublicKey(models.Model):
+
+    class Meta:
+        verbose_name = u"公開鍵"
+        verbose_name_plural = u"公開鍵"
 
     user = models.ForeignKey(User)
     server = models.ForeignKey("Server", null=True, blank=True)
