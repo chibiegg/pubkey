@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>公開鍵一覧</title>
+  </head>
+  <body>
+    <h1>公開鍵</h1>
+    
+    
+    <a href="{% url "publickey_add" %}">追加</a>
+
+    
+    <table>
+      <tr>
+        <th>名称</th>
+        <th>公開鍵</th>
+        <th>サーバ</th>
+      </tr>
+      
+      {% for key in keys %}
+        <tr>
+          <td><a href="{% url "publickey_edit" key.id %}">{{ key.description }}</a></td>
+          <td>{{ key.key }}</td>
+          <td>{{ key.server }}</td>
+        </tr>
+      {% endfor %}
+    
+    </table>
+    
+  </body>
+</html>

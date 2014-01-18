@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/pubkey/admin.py=utf-8
+encoding//src/pubkey/forms.py=utf-8
+encoding//src/pubkey/models.py=utf-8
+encoding//src/pubkey/templates/key_form.html=utf-8
+encoding//src/pubkey/templates/key_list.html=UTF-8
+encoding//src/pubkey/templates/login.html=UTF-8
+encoding//src/pubkey/views.py=utf-8
